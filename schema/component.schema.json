@@ -14,7 +14,7 @@
       "properties": {
         "_supportedLayout": {
           "type": "string",
-          "title": "Supported layout",
+          "title": "Aspect acceptat",
           "default": "half-width",
           "enum": [
             "full-width",
@@ -27,16 +27,16 @@
         },
         "instruction": {
           "type": "string",
-          "title": "Instruction",
-          "default": "Choose {{#if _isRadio}}one option{{else}}one or more options{{/if}} then select Submit.",
+          "title": "Instruciuni",
+          "default": "Alegeți {{#if _isRadio}}o opțiune{{else}}una sau mai multe opțiuni{{/if}} apoi selectați Trimiteți.",
           "_adapt": {
             "translatable": true
           }
         },
         "ariaQuestion": {
           "type": "string",
-          "title": "ARIA question",
-          "description": "This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.",
+          "title": "Întrebare ARIA",
+          "description": "Aceasta va fi citită de cititoarele de ecran în loc să citească câmpurile 'Titlu de afișare', 'Conținut' și 'Instrucțiune' atunci când se concentrează pe opțiuni. Pentru a fi clar și concis, asigurați-vă că textul cuprinde doar întrebarea asociată.",
           "default": "",
           "_adapt": {
             "translatable": true
@@ -44,15 +44,15 @@
         },
         "_items": {
           "type": "array",
-          "title": "Items",
-          "description": "The possible answers available to the learner",
+          "title": "Elemente",
+          "description": "Răspunsurile posibile disponibile pentru cursant",
           "items": {
             "type": "object",
             "properties": {
               "text": {
                 "type": "string",
                 "title": "Text",
-                "description": "This text will display as the answer text",
+                "description": "Acest text se va afișa ca text de răspuns",
                 "default": "",
                 "_adapt": {
                   "translatable": true
@@ -60,8 +60,8 @@
               },
               "altText": {
                 "type": "string",
-                "title": "Alternative text",
-                "description": "This will be read out by screen readers instead of reading 'text'. Optional for providing alternative text, for example, to specify how a word should be pronounced.",
+                "title": "Text alternativ",
+                "description": "Acesta va fi citit de cititoarele de ecran în loc să citească 'text'. Opțional pentru a oferi text alternativ, de exemplu, pentru a specifica cum ar trebui pronunțat un cuvânt.",
                 "default": "",
                 "_adapt": {
                   "translatable": true
@@ -69,18 +69,18 @@
               },
               "_shouldBeSelected": {
                 "type": "boolean",
-                "title": "Mark this option as correct",
+                "title": "Marcați această opțiune ca fiind corectă",
                 "default": false
               },
               "_isPartlyCorrect": {
                 "type": "boolean",
-                "title": "Mark this option as partly correct",
+                "title": "Marcați această opțiune ca parțial corectă",
                 "default": false
               },
               "feedback": {
                 "type": "string",
-                "title": "Answer-specific feedback",
-                "description": "When 'Selectable items' is set to 1, this can be used to give the user feedback specific to the answer they selected - if incorrect",
+                "title": "Feedback pentru răspunsul specific",
+                "description": "Când 'Elementele selectabile' sunt setate pe 1, asta poate fi folosit pentru a oferi utilizatorului feedback pentru răspunsul specific pe care l-a selectat - dacă este greșit",
                 "default": "",
                 "_adapt": {
                   "translatable": true
@@ -89,8 +89,8 @@
               },
               "_score": {
                 "type": "number",
-                "title": "Score",
-                "description": "If item scoring is enabled, selected item scores are summed to give the question score",
+                "title": "Scor",
+                "description": "Dacă scorul elementelor este activat, scorurile elementelor selectate sunt însumate pentru a da scorul întrebării",
                 "default": 0
               }
             }
@@ -98,64 +98,64 @@
         },
         "_attempts": {
           "type": "number",
-          "title": "Allowed attempts",
-          "description": "How many attempts the learner is allowed",
+          "title": "Încercări permise",
+          "description": "Câte încercări are voie cursantului",
           "default": 1
         },
         "_canShowModelAnswer": {
           "type": "boolean",
-          "title": "Enable correct answer toggle",
-          "description": "Allow the user to view the 'model answer' if they answer the question incorrectly",
+          "title": "Activați comutarea răspunsului corect",
+          "description": "Permite utilizatorului să vadă 'modelul de răspuns' dacă răspunde greșit.",
           "default": true
         },
         "_canShowCorrectness": {
           "type": "boolean",
-          "title": "Enable items to display correctness",
-          "description": "If enabled, this replaces the associated 'model answer' toggle button and displays correctness directly on the component items.",
+          "title": "Activarea elementelor pentru a afișa corectitudinea",
+          "description": "Dacă este activat, asta înlocuiește butonul de comutare 'model răspuns' asociat și afișează corectitudinea direct pe elementele componente.",
           "default": false
         },
         "_canShowFeedback": {
           "type": "boolean",
-          "title": "Enable feedback",
+          "title": "Activați feedback",
           "default": true
         },
         "_canShowMarking": {
           "type": "boolean",
-          "title": "Enable marking",
+          "title": "Activați marcarea",
           "default": true
         },
         "_shouldDisplayAttempts": {
           "type": "boolean",
-          "title": "Show number of remaining attempts",
+          "title": "Afișați numărul de încercări rămase",
           "default": false
         },
         "_isRandom": {
           "type": "boolean",
-          "title": "Randomise answers",
+          "title": "Răspunsuri aleatorii",
           "default": false
         },
         "_recordInteraction": {
           "type": "boolean",
-          "title": "Record interaction",
-          "description": "If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only",
+          "title": "Înregistrare interacțiune",
+          "description": "Dacă este dezactivată, înregistrarea răspunsurilor utilizatorului la această întrebare la cmi.interactions pe LMS va fi dezactivată numai pentru această componentă",
           "default": true
         },
         "_hasItemScoring": {
           "type": "boolean",
-          "title": "Enable item scoring",
-          "description": "When disabled, this question scores 0 for incorrect and 'Question weight' for correct. When enabled, this question scores by summing the scores of the selected options",
+          "title": "Activare scoring element",
+          "description": "Când este dezactivată, această întrebare primește 0 pentru greșit și 'Importanța întrebării' pentru corect. Când este activată, această întrebare primește punctaj prin adunarea punctajelor opțiunilor selectate.",
           "default": false
         },
         "_questionWeight": {
           "type": "number",
-          "title": "Question weight",
-          "description": "When item scoring is disabled, this is the question score for a correct response",
+          "title": "Importanța întrebării",
+          "description": "Când 'Scorul elementelor' este activat, acesta este scorul întrebării dacă toate elementele sunt selectate corect",
           "default": 1
         },
         "_selectable": {
           "type": "number",
-          "title": "Selectable items",
-          "description": "How many items are selectable",
+          "title": "Elemente selectabile",
+          "description": "Câte elemente pot fi selectate de către utilizator",
           "default": 1
         },
         "_feedback": {
@@ -165,8 +165,8 @@
           "properties": {
             "title": {
               "type": "string",
-              "title": "Title",
-              "description": "Title text for the feedback",
+              "title": "Titlu",
+              "description": "Textul care va fi afișat ca titlu pentru feedback",
               "default": "",
               "_adapt": {
                 "translatable": true
@@ -174,8 +174,8 @@
             },
             "altTitle": {
               "type": "string",
-              "title": "Alternative Feedback Title",
-              "description": "Text read out by screen readers if no visual title is included",
+              "title": "Titlu pentru feedback alternativ",
+              "description": "Text citit de cititoarele de ecran dacă nu este inclus niciun titlu vizual",
               "default": "",
               "_adapt": {
                 "translatable": true
@@ -183,8 +183,8 @@
             },
             "correct": {
               "type": "string",
-              "title": "Correct feedback",
-              "description": "Correct answer feedback for this question",
+              "title": "Feedback corect",
+              "description": "Feedback-ul care va fi afișat atunci când utilizatorul răspunde corect",
               "default": "",
               "_adapt": {
                 "translatable": true
@@ -193,13 +193,13 @@
             },
             "_incorrect": {
               "type": "object",
-              "title": "Incorrect",
+              "title": "Incorect",
               "default": {},
               "properties": {
                 "final": {
                   "type": "string",
-                  "title": "Default incorrect feedback",
-                  "description": "Incorrect answer feedback for the final attempt",
+                  "title": "Feedback incorect implicit",
+                  "description": "Feedback de răspuns incorect pentru încercarea finală",
                   "default": "",
                   "_adapt": {
                     "translatable": true
@@ -208,8 +208,8 @@
                 },
                 "notFinal": {
                   "type": "string",
-                  "title": "Retry feedback",
-                  "description": "Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the default incorrect feedback will be used instead",
+                  "title": "Feedback pentru încercare",
+                  "description": "Feedback de răspuns incorect pentru orice încercare în afară de ultima încercare. Dacă lăsați acest lucru necompletat, va fi folosit în schimb feedback-ul incorect implicit",
                   "default": "",
                   "_adapt": {
                     "translatable": true
@@ -220,13 +220,13 @@
             },
             "_partlyCorrect": {
               "type": "object",
-              "title": "Partly correct",
+              "title": "Parțial corect",
               "default": {},
               "properties": {
                 "final": {
                   "type": "string",
-                  "title": "Default partly correct feedback",
-                  "description": "Partly correct answer feedback for the final attempt. If you leave this blank, the default incorrect feedback will be used instead",
+                  "title": "Feedback parțial corect implicit",
+                  "description": "Feedback de răspuns parțial corect pentru încercarea finală. Dacă lăsați acest lucru necompletat, va fi folosit în schimb feedback-ul incorect implicit",
                   "default": "",
                   "_adapt": {
                     "translatable": true
@@ -235,8 +235,8 @@
                 },
                 "notFinal": {
                   "type": "string",
-                  "title": "Retry feedback",
-                  "description": "Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the default partly correct feedback will be used instead",
+                  "title": "Feedback pentru reîncercare",
+                  "description": "Feedback de răspuns parțial corect pentru orice încercare în afară de ultima încercare. Dacă lăsați acest lucru necompletat, va fi folosit în schimb feedback-ul parțial corect implicit",
                   "default": "",
                   "_adapt": {
                     "translatable": true
@@ -249,17 +249,17 @@
         },
         "_buttons": {
           "type": "object",
-          "title": "Button overrides",
+          "title": "Înlocuirea butoanelor",
           "default": {},
           "properties": {
             "_submit": {
               "type": "object",
-              "title": "Submit",
+              "title": "Trimite",
               "default": {},
               "properties": {
                 "buttonText": {
                   "type": "string",
-                  "title": "Button text",
+                  "title": "Text buton",
                   "default": "",
                   "_adapt": {
                     "translatable": true
@@ -267,7 +267,7 @@
                 },
                 "ariaLabel": {
                   "type": "string",
-                  "title": "ARIA label",
+                  "title": "Etichetă ARIA",
                   "default": "",
                   "_adapt": {
                     "translatable": true
@@ -282,7 +282,7 @@
               "properties": {
                 "buttonText": {
                   "type": "string",
-                  "title": "Button text",
+                  "title": "Text buton",
                   "default": "",
                   "_adapt": {
                     "translatable": true
@@ -290,7 +290,7 @@
                 },
                 "ariaLabel": {
                   "type": "string",
-                  "title": "ARIA label",
+                  "title": "Etichetă ARIA",
                   "default": "",
                   "_adapt": {
                     "translatable": true
@@ -300,12 +300,12 @@
             },
             "_showCorrectAnswer": {
               "type": "object",
-              "title": "Show correct answer",
+              "title": "Afișați răspunsul corect",
               "default": {},
               "properties": {
                 "buttonText": {
                   "type": "string",
-                  "title": "Button text",
+                  "title": "Text buton",
                   "default": "",
                   "_adapt": {
                     "translatable": true
@@ -313,7 +313,7 @@
                 },
                 "ariaLabel": {
                   "type": "string",
-                  "title": "ARIA label",
+                  "title": "Etichetă ARIA",
                   "default": "",
                   "_adapt": {
                     "translatable": true
@@ -323,12 +323,12 @@
             },
             "_hideCorrectAnswer": {
               "type": "object",
-              "title": "Hide correct answer",
+              "title": "Ascundeți răspunsul corect",
               "default": {},
               "properties": {
                 "buttonText": {
                   "type": "string",
-                  "title": "Button text",
+                  "title": "Text buton",
                   "default": "",
                   "_adapt": {
                     "translatable": true
@@ -336,7 +336,7 @@
                 },
                 "ariaLabel": {
                   "type": "string",
-                  "title": "ARIA label",
+                  "title": "Etichetă ARIA",
                   "default": "",
                   "_adapt": {
                     "translatable": true
@@ -346,12 +346,12 @@
             },
             "_showFeedback": {
               "type": "object",
-              "title": "Show feedback",
+              "title": "Afișați feedback-ul",
               "default": {},
               "properties": {
                 "buttonText": {
                   "type": "string",
-                  "title": "Button text",
+                  "title": "Text buton",
                   "default": "",
                   "_adapt": {
                     "translatable": true
@@ -359,7 +359,7 @@
                 },
                 "ariaLabel": {
                   "type": "string",
-                  "title": "ARIA label",
+                  "title": "Etichetă ARIA",
                   "default": "",
                   "_adapt": {
                     "translatable": true
@@ -369,7 +369,7 @@
             },
             "remainingAttemptsText": {
               "type": "string",
-              "title": "Remaining attempts label",
+              "title": "Încercări rămase",
               "default": "",
               "_adapt": {
                 "translatable": true
@@ -377,7 +377,7 @@
             },
             "remainingAttemptText": {
               "type": "string",
-              "title": "Final attempt label",
+              "title": "Etichetă de încercare finală",
               "default": "",
               "_adapt": {
                 "translatable": true

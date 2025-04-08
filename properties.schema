@@ -7,7 +7,7 @@
     "ariaRegion": {
       "type": "string",
       "required": true,
-      "default": "Multiple choice question",
+      "default": "Întrebare cu răspunsuri multiple",
       "inputType": "Text",
       "validators": [],
       "translatable": true
@@ -15,28 +15,28 @@
     "ariaCorrectAnswer": {
       "type": "string",
       "required": true,
-      "default": "The correct answer is {{{correctAnswer}}}",
+      "default": "Răspunsul corect este {{{correctAnswer}}}",
       "inputType": "Text",
       "validators": [],
-      "help": "Text that will be announced by the screen reader when the learner selects the 'correct answer' button (and there is only one correct answer)",
+      "help": "Textul care va fi anunțat de cititorul de ecran atunci când elevul selectează butonul 'răspuns corect' (și există un singur răspuns corect)",
       "translatable": true
     },
     "ariaCorrectAnswers": {
       "type": "string",
       "required": true,
-      "default": "The correct answers are {{{correctAnswer}}}",
+      "default": "Răspunsul corect este {{{correctAnswer}}}",
       "inputType": "Text",
       "validators": [],
-      "help": "Text that will be announced by the screen reader when the learner selects the 'correct answer' button (and there is more than one correct answer)",
+      "help": "Text care va fi anunțat de cititorul de ecran atunci când cursantul selectează butonul 'răspuns corect' (și există mai multe răspunsuri corecte)",
       "translatable": true
     },
     "ariaUserAnswer": {
       "type": "string",
       "required": true,
-      "default": "The answer you chose was {{{userAnswer}}}",
+      "default": "Răspunsul pe care l-ați ales a fost {{{userAnswer}}}",
       "inputType": "Text",
       "validators": [],
-      "help": "Text that will be announced by the screen reader when the learner selects the 'hide correct answer' button (and the learner only chose one answer)",
+      "help": "Text care va fi anunțat de cititorul de ecran când elevul selectează butonul 'ascunde răspunsul corect' (iar elevul a ales doar un răspuns)",
       "translatable": true
     },
     "ariaUserAnswers": {
@@ -60,10 +60,10 @@
     "instruction": {
       "type": "string",
       "required": false,
-      "default": "Choose {{#if _isRadio}}one option{{else}}one or more options{{/if}} then select Submit.",
+      "default": "Alegeți {{#if _isRadio}}o opțiune{{else}}una sau mai multe opțiuni{{/if}} apoi selectați Trimite.",
       "inputType": "Text",
       "validators": [],
-      "help": "This is the instruction text",
+      "help": "Acesta este textul instrucțiunilor",
       "translatable": true
     },
     "ariaQuestion": {
@@ -72,14 +72,14 @@
       "default": "",
       "inputType": "Text",
       "validators": [],
-      "help": "This will be read out by screen readers instead of reading the 'Display title', 'Body' & 'Instruction' fields when focusing on the options. To be clear and concise, ensure the text encompasses only the question associated.",
+      "help": "Aceasta va fi citită de cititoarele de ecran în loc să citească câmpurile 'Titlu de afișare', 'Conținut' și 'Instrucțiune' atunci când se concentrează pe opțiuni. Pentru a fi clar și concis, asigurați-vă că textul cuprinde doar întrebarea asociată.",
       "translatable": true
     },
     "_items": {
       "type": "array",
       "required": true,
-      "title": "Answers",
-      "help": "The possible answers available to the learner",
+      "title": "Răspunsuri",
+      "help": "Răspunsurile posibile disponibile pentru cursant",
       "items": {
         "type": "object",
         "required": true,
@@ -88,27 +88,27 @@
             "type": "string",
             "required": true,
             "default": "",
-            "title": "Answer Text",
+            "title": "Text răspuns", 
             "inputType": "Text",
             "validators": ["required"],
-            "help": "This text will display as the answer text",
+            "help": "Acest text se va afișa ca text de răspuns",
             "translatable": true
           },
           "altText": {
             "type": "string",
             "required": false,
-            "title": "Alternative text",
+            "title": "Text alternativ",
             "default": "",
             "inputType": "Text",
             "validators": [],
-            "help": "This will be read out by screen readers instead of reading 'text'. Optional for providing alternative text, for example, to specify how a word should be pronounced.",
+            "help": "Acesta va fi citit de cititoarele de ecran în loc să citească 'text'. Opțional pentru a oferi text alternativ, de exemplu, pentru a specifica cum ar trebui pronunțat un cuvânt.",
             "translatable": true
           },
           "_shouldBeSelected": {
             "type": "boolean",
             "required": true,
             "default": false,
-            "title": "Correct answer?",
+            "title": "Răspunsul corect?",
             "inputType": "Checkbox",
             "validators": []
           },
@@ -116,7 +116,7 @@
             "type": "boolean",
             "required": true,
             "default": false,
-            "title": "Is only partly correct?",
+            "title": "Este doar parțial corect?",
             "inputType": "Checkbox",
             "validators": []
           },
@@ -124,20 +124,20 @@
             "type": "string",
             "required": false,
             "default": "",
-            "title": "Answer-specific feedback",
+            "title": "Feedback pentru răspunsul specific",
             "inputType": "TextArea",
             "validators": [],
-            "help": "When 'Selectable Items' is set to 1, this can be used to give the user feedback specific to the answer they selected - if incorrect.",
+            "help": "Când 'Elemente selectabile' este setat la 1, acesta poate fi folosit pentru a oferi utilizatorului feedback specific răspunsului pe care l-a selectat - dacă este incorect.",
             "translatable": true
           },
           "_score": {
             "type": "number",
             "required": false,
             "default": 0,
-            "title": "Score",
+            "title": "Scor",
             "inputType": "Number",
             "validators": ["required", "number"],
-            "help": "If item scoring is enabled, selected item scores are summed to give the question score."
+            "help": "Dacă scorul elementelor este activat, scorurile elementelor selectate sunt însumate pentru a oferi scorul întrebării."
           }
         }
       }
@@ -146,41 +146,41 @@
       "type": "number",
       "required": true,
       "default": 1,
-      "title": "Attempts",
+      "title": "Încercări",
       "inputType": "Number",
       "validators": ["required", "number"],
-      "help": "How many attempts the learner is allowed"
+      "help": "Câte încercări i se permit elevului?"
     },
     "_canShowModelAnswer": {
       "type": "boolean",
       "required": true,
       "default": true,
-      "title": "Display Model Answer",
+      "title": "Afisează modelul de răspuns",
       "inputType": "Checkbox",
       "validators": [],
-      "help": "Allow the user to view the 'model answer' if they answer the question incorrectly?"
+      "help": "Permite utilizatorului să vadă 'modelul de răspuns' dacă răspunde greșit la întrebare?"
     },
     "_canShowCorrectness": {
       "type": "boolean",
       "required": false,
       "default": false,
-      "title": "Display item correctness",
+      "title": "Afișarea corectitudinii elementului",
       "inputType": "Checkbox",
       "validators": [],
-      "help": "If enabled, this replaces the associated 'model answer' toggle button and displays correctness directly on the component items."
+      "help": "Dacă este activat, asta înlocuiește butonul de comutare 'răspuns model' asociat și arată corectitudinea direct pe elementele componente."
     },
     "_canShowFeedback": {
       "type": "boolean",
       "required": true,
       "default": true,
-      "title": "Display Feedback",
+      "title": "Afisează feedback",
       "inputType": "Checkbox",
       "validators": []
     },
     "_canShowMarking": {
       "type": "boolean",
       "default": true,
-      "title": "Display Marking",
+      "title": "Afisează marcarea",
       "inputType": "Checkbox",
       "validators": []
     },
@@ -188,16 +188,16 @@
       "type": "boolean",
       "required": false,
       "default": false,
-      "title": "Display Attempts",
+      "title": "Afisează numărul de încercări rămase",
       "inputType": "Checkbox",
       "validators": [],
-      "help": "Display the number of attempts remaining?"
+      "help": "Afișați numărul de încercări rămase?"
     },
     "_isRandom": {
       "type": "boolean",
       "required": false,
       "default": false,
-      "title": "Randomise answers",
+      "title": "Răspunsuri aleatorii",
       "inputType": "Checkbox",
       "validators": []
     },
@@ -205,37 +205,37 @@
       "type": "boolean",
       "required": false,
       "default": true,
-      "title": "Record interaction",
+      "title": "Înregistrarea interacțiunii",
       "inputType": "Checkbox",
       "validators": [],
-      "help": "If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only."
+      "help": "Dacă este dezactivată, înregistrarea răspunsurilor utilizatorului la această întrebare la cmi.interactions pe LMS va fi dezactivată numai pentru această componentă."
     },
     "_hasItemScoring": {
       "type": "boolean",
       "required": false,
       "default": false,
-      "title": "Enable item scoring",
+      "title": "Activați scorul elementelor",
       "inputType": "Checkbox",
       "validators": [],
-      "help": "When disabled, this question scores 0 for incorrect and 'Question Weight' for correct. When enabled, this question scores by summing the scores of the selected options."
+      "help": "Când este dezactivată, întrebarea asta primește 0 pentru greșit și 'Importanța Întrebării' pentru corect. Când este activată, întrebarea asta primește punctajul prin adunarea punctajelor opțiunilor selectate."
     },
     "_questionWeight": {
       "type": "number",
       "required": false,
       "default": 1,
-      "title": "Question Weight",
+      "title": "Importanța întrebării",
       "inputType": "Number",
       "validators": ["number"],
-      "help": "When item scoring is disabled, this is the question score for a correct response."
+      "help": "Când scorul elementelor este dezactivat, acesta este scorul întrebării pentru un răspuns corect."
     },
     "_selectable": {
       "type": "number",
       "required": true,
       "default": 1,
-      "title": "Selectable Items",
+      "title": "Articole selectabile",
       "inputType": "Number",
       "validators": ["number", "required"],
-      "help": "How many items are selectable"
+      "help": "Câte articole pot fi selectate"
     },
     "_feedback": {
       "type": "object",
@@ -246,45 +246,45 @@
           "type": "string",
           "required": false,
           "default": "",
-          "title": "Feedback Title",
+          "title": "Titlu feedback",
           "inputType": "Text",
           "validators": [],
-          "help": "Leave blank to have the component's title shown instead.",
+          "help": "Lăsați necompletat pentru a afișa în schimb titlul componentei.",
           "translatable": true
         },
         "correct": {
           "type": "string",
           "required": false,
           "default": "",
-          "title": "Correct",
+          "title": "Corect",
           "inputType": "TextArea",
           "validators": [],
-          "help": "Correct answer feedback for this question",
+          "help": "Feedback pentru răspuns corect la această întrebare",
           "translatable": true
         },
         "_incorrect": {
           "type": "object",
           "required": false,
-          "title": "Incorrect Feedback",
+          "title": "Feedback incorect",
           "properties": {
             "final": {
               "type": "string",
               "required": false,
               "default": "",
-              "title": "Incorrect Final",
+              "title": "Răspuns final incorect",
               "inputType": "TextArea",
               "validators": [],
-              "help": "Incorrect answer feedback for the final attempt",
+              "help": "Feedback de răspuns incorect pentru încercarea finală",
               "translatable": true
             },
             "notFinal": {
               "type": "string",
               "required": false,
               "default": "",
-              "title": "Incorrect Not Final",
+              "title": "Răspuns incorect pentru orice încercare în afară de ultima încercare",
               "inputType": "TextArea",
               "validators": [],
-              "help": "Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the 'Incorrect Final' feedback will be used instead.",
+              "help": "Feedback incorect pentru orice încercare în afară de ultima încercare. Dacă lăsați acest lucru gol, feedback-ul 'Final incorect' va fi folosit în schimb.",
               "translatable": true
             }
           }
@@ -297,20 +297,20 @@
               "type": "string",
               "required": false,
               "default": "",
-              "title": "Partly Correct Final",
+              "title": "Final parțial corect",
               "inputType": "TextArea",
               "validators": [],
-              "help": "Partly correct answer feedback for the final attempt. If you leave this blank, the 'Incorrect Final' feedback will be used instead.",
+              "help": "Feedback parțial corect pentru răspunsul final. Dacă lași acest lucru gol, feedback-ul 'Final Incorect' va fi folosit în schimb.",
               "translatable": true
             },
             "notFinal": {
               "type": "string",
               "required": false,
               "default": "",
-              "title": "Partly Correct Not Final",
+              "title": "Răspuns parțial corect pentru orice încercare în afară de ultima încercare",
               "inputType": "TextArea",
               "validators": [],
-              "help": "Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the 'Partly Correct Final' feedback will be used instead.",
+              "help": "Feedback parțial corect pentru orice încercare în afară de ultima încercare. Dacă lăsați acest lucru gol, feedback-ul 'Final Parțial Corect' va fi folosit în schimb.",
               "translatable": true
             }
           }
@@ -319,12 +319,12 @@
     },
     "_buttons": {
       "type": "object",
-      "title": "Buttons",
+      "title": "Butoane",
       "required": false,
       "properties": {
         "_submit": {
           "type": "object",
-          "title": "Submit",
+          "title": "Trimite",
           "properties": {
             "buttonText": {
               "type": "string",
@@ -333,17 +333,17 @@
               "title": "",
               "inputType": "QuestionButton",
               "validators": [],
-              "help": "Button label text for the submit button",
+              "help": "Textul etichetei butonului pentru butonul de trimitere",
               "translatable": true
             },
             "ariaLabel": {
               "type": "string",
               "required": false,
               "default": "",
-              "title": "",
+              "title": "Etichetă ARIA",
               "inputType": "QuestionButton",
               "validators": [],
-              "help": "Aria label for the submit button",
+              "help": "Eticheta Aria pentru butonul de trimitere",
               "translatable": true
             }
           }
@@ -356,98 +356,98 @@
               "type": "string",
               "required": false,
               "default": "",
-              "title": "",
+              "title": "Text buton",
               "inputType": "QuestionButton",
               "validators": [],
-              "help": "Button label text for the reset button",
+              "help": "Textul etichetei butonului pentru butonul de resetare",
               "translatable": true
             },
             "ariaLabel": {
               "type": "string",
               "required": false,
               "default": "",
-              "title": "",
+              "title": "Etichetă ARIA",
               "inputType": "QuestionButton",
               "validators": [],
-              "help": "Aria label for the reset button",
+              "help": "Eticheta Aria pentru butonul de resetare",
               "translatable": true
             }
           }
         },
         "_showCorrectAnswer": {
           "type": "object",
-          "title": "Show Correct Answer",
+          "title": "Afișați răspunsul corect",
           "properties": {
             "buttonText": {
               "type": "string",
               "required": false,
               "default": "",
-              "title": "",
+              "title": "Text buton",
               "inputType": "QuestionButton",
               "validators": [],
-              "help": "Button label text to show the model answer",
+              "help": "Textul etichetei butonului pentru a afișa modelul de răspuns",
               "translatable": true
             },
             "ariaLabel": {
               "type": "string",
               "required": false,
               "default": "",
-              "title": "",
+              "title": "Etichetă ARIA", 
               "inputType": "QuestionButton",
               "validators": [],
-              "help": "Aria label for the show model answer button",
+              "help": "Eticheta Aria pentru butonul de răspuns Afișați modelul",
               "translatable": true
             }
           }
         },
         "_hideCorrectAnswer": {
           "type": "object",
-          "title": "Hide Correct Answer",
+          "title": "Ascunde răspunsul corect",
           "properties": {
             "buttonText": {
               "type": "string",
               "required": false,
               "default": "",
-              "title": "",
+              "title": "Text buton",
               "inputType": "QuestionButton",
               "validators": [],
-              "help": "Button label text to hide the model answer",
+              "help": "Textul etichetei butonului pentru a ascunde modelul de răspuns",
               "translatable": true
             },
             "ariaLabel": {
               "type": "string",
               "required": false,
               "default": "",
-              "title": "",
+              "title": "Etichetă ARIA",
               "inputType": "QuestionButton",
               "validators": [],
-              "help": "Aria label for the hide model answer button",
+              "help": "Eticheta Aria pentru butonul ascunde modelul de răspuns",
               "translatable": true
             }
           }
         },
         "_showFeedback": {
           "type": "object",
-          "title": "Show Feedback",
+          "title": "Afisează Feedback",
           "properties": {
             "buttonText": {
               "type": "string",
               "required": false,
               "default": "",
-              "title": "",
+              "title": "Text buton",
               "inputType": "QuestionButton",
               "validators": [],
-              "help": "Button label text to show feedback",
+              "help": "Textul etichetei butonului pentru a afișa feedback",
               "translatable": true
             },
             "ariaLabel": {
               "type": "string",
               "required": false,
               "default": "",
-              "title": "",
+              "title": "Eticheta ARIA",
               "inputType": "QuestionButton",
               "validators": [],
-              "help": "Aria label for the show feedback button",
+              "help": "Etichetă Aria pentru butonul de afișare a feedbackului",
               "translatable": true
             }
           }
@@ -456,20 +456,20 @@
           "type": "string",
           "required": false,
           "default": "",
-          "title": "Attempts Remaining Text",
+          "title": "Textul pentru încercările rămase",
           "inputType": "QuestionButton",
           "validators": [],
-          "help": "Shown when there are multiple attempts left",
+          "help": "Afișat atunci când au mai rămas mai multe încercări",
           "translatable": true
         },
         "remainingAttemptText": {
           "type": "string",
           "required": false,
           "default": "",
-          "title": "Final Attempt Text",
+          "title": "Textul pentru încercărea finală",
           "inputType": "QuestionButton",
           "validators": [],
-          "help": "Shown when there is one attempt left",
+          "help": "Afișat când a mai rămas o încercare",
           "translatable": true
         }
       }

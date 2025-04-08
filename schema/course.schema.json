@@ -18,13 +18,13 @@
               "properties": {
                 "_mcq": {
                   "type": "object",
-                  "title": "MCQ",
+                  "title": "Întrebare cu răspunsuri multiple",
                   "default": {},
                   "properties": {
                     "ariaRegion": {
                       "type": "string",
-                      "title": "ARIA region",
-                      "default": "Multiple choice question",
+                      "title": "Zonă ARIA",
+                      "default": "Întrebare cu răspunsuri multiple",
                       "_adapt": {
                         "translatable": true
                       }

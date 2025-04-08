@@ -5,10 +5,10 @@
         "_component": "mcq",
         "_classes": "",
         "_layout": "left",
-        "title": "MCQ",
-        "displayTitle": "MCQ",
-        "body": "Which of the following options would you consider to be correct?",
-        "instruction": "Choose {{#if _isRadio}}one option{{else}}one or more options{{/if}} then select Submit.",
+        "title": "Întrebare cu răspunsuri multiple",
+        "displayTitle": "Întrebare cu răspunsuri multiple",
+        "body": "Care dintre următoarele opțiuni ați considera că este corectă?",
+        "instruction": "Alegeți {{#if _isRadio}}o opțiune{{else}}una sau mai multe opțiuni{{/if}} apoi selectați Trimite.",
         "ariaQuestion": "",
         "_attempts": 1,
         "_shouldDisplayAttempts": false,
@@ -23,65 +23,65 @@
         "_recordInteraction": true,
         "_items": [
             {
-                "text": "This is option 1 (Correct)",
+                "text": "Aceasta este opțiunea 1 (Corectă)",
                 "altText": "",
                 "_shouldBeSelected": true,
                 "_isPartlyCorrect": false
             },
             {
-                "text": "This is option 2",
+                "text": "Aceasta este opțiunea 2",
                 "_shouldBeSelected": false,
-                "feedback": "Option two incorrect feedback",
+                "feedback": "Opțiunea a doua feedback incorect",
                 "_isPartlyCorrect": false
             },
             {
-                "text": "This is option 3",
+                "text": "Aceasta este opțiunea 3",
                 "_shouldBeSelected": false,
                 "_isPartlyCorrect": false
             },
             {
-                "text": "This is option 4",
+                "text": "Aceasta este opțiunea 4",
                 "_shouldBeSelected": false,
                 "_isPartlyCorrect": false
             }
         ],
         "_feedback":{
             "title": "Feedback",
-            "altTitle": "Alt feedback title text",
-            "correct": "Congratulations, this is the correct feedback.",
+            "altTitle": "Textul titlului feedbackului alternativ",
+            "correct": "Felicitări, acesta este feedback-ul corect.",
             "_incorrect": {
                 "notFinal": "",
-                "final": "This feedback will appear if you answered the question incorrectly."
+                "final": "Acest feedback va apărea dacă ați răspuns incorect la întrebare."
             },
             "_partlyCorrect": {
                 "notFinal": "",
-                "final": "This feedback will appear if you answered the question correctly."
+                "final": "Acest feedback va apărea dacă ați răspuns corect la întrebare."
             }
         },
-        "_comment": "You only need to include _buttons if you want to override the button labels that are set in course.json",
+        "_comment": "Trebuie să includeți _buttons numai dacă doriți să înlocuiți etichetele butoanelor setate în course.json",
         "_buttons": {
             "_submit": {
-                "buttonText": "Submit",
-                "ariaLabel": "Select here to submit your answer."
+                "buttonText": "Trimite",
+                "ariaLabel": "Selectați aici pentru a trimite răspunsul."
             },
             "_reset": {
                 "buttonText": "Reset",
                 "ariaLabel": ""
             },
             "_showCorrectAnswer": {
-                "buttonText": "Correct Answer",
+                "buttonText": "Răspunsul corect",
                 "ariaLabel": ""
             },
             "_hideCorrectAnswer": {
-                "buttonText": "My Answer",
+                "buttonText": "Răspunsul meu",
                 "ariaLabel": ""
             },
             "_showFeedback": {
-                "buttonText": "Show feedback",
+                "buttonText": "Afisează feedback",
                 "ariaLabel": ""
             },
-            "remainingAttemptsText": "attempts remaining",
-            "remainingAttemptText": "final attempt"
+            "remainingAttemptsText": "încercări rămase",
+            "remainingAttemptText": "încercare finală"
         },
         "_pageLevelProgress": {
             "_isEnabled": true
